@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR CODE GENERATOR</title>
+    <div style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPS-dSP8MWiPUP_gfRQTNZdWf0fFpH8N3-iw&usqp=CAU);background-size: 100% 100%;background-repeat: no-repeat;" >
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">QR CODE GENERATOR</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <div class="container">
+
+
+
+        <form action="\qrgenerator" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Submit File</h5>
+                            <!-- Departure -->
+                            <input type="file" name="File" class="form-control" autocomplete="off" id="Submit File" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Submit" class="btn btn-info" style="height:50px; width:100px">
+            </div>
+        </form>
+
+        <br>
+        <br>
+        {% if file %}
+            <div>
+                <img src="data:image/jpeg;base64,{{ file }}">
+            </div>
+        {% endif %}
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Biswajit Rajaguru Mohapatra</h3>
+        <p>
+            <a href="https://github.com/Aaric-hub">GitHUb Profile!!&nbsp&nbsp&nbsp</a>
+            <a href="mailto:sign2biswajit@gmail.com">Email&nbsp&nbsp&nbsp</a>
+            <a href="www.linkedin.com/in/biswajit-mohapatro">LinkedIN Profile!!&nbsp&nbsp&nbsp</a>
+        </p>
+
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
